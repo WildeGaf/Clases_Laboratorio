@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1536033995 source:c:\users\gonza\desktop\trabajopractico\main.c
+	<stdio.h>
+	<stdlib.h>
+	"calculadora.h"
+
+1536033874 source:c:\users\gonza\desktop\trabajopractico\calculadora.c
+
+1536033978 c:\users\gonza\desktop\trabajopractico\calculadora.h
+
+1536033874 source:c:\users\alumno\downloads\trabajopractico\calculadora.c
+
+1536033995 source:c:\users\alumno\downloads\trabajopractico\main.c
+	<stdio.h>
+	<stdlib.h>
+	"calculadora.h"
+
+1536098489 c:\users\alumno\downloads\trabajopractico\calculadora.h
+
