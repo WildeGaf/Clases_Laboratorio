@@ -65,7 +65,7 @@ int division(num1,num2){
     return div;
 }
 /**
-* @brief Realiza el factorial de un numero ingresado.
+* @brief Realiza el factorial de un numero ingresado, en caso de que sea un numero negativo, da un mensaje de error.
 * @param num El numero al cual se desea realizar el factorial.
 * @return Devuelve el factorial del numero ingresado.
 */
