@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 int menu(){
     int opcion;
     printf("Menu de la calculadora\n");
@@ -12,31 +15,31 @@ int menu(){
     return opcion;
 }
 
-int suma(num1,num2){
+int suma(int num1, int num2){
     int suma;
     suma = (num1+num2);
     return suma;
 }
 
-int resta(num1,num2){
+int resta(int num1, int num2){
     int resta;
     resta = num1-num2;
     return resta;
 }
 
-int multiplicacion(num1,num2){
+int multiplicacion(int num1,int num2){
     int multi;
     multi = num1*num2;
     return multi;
 }
 
-int division(num1,num2){
+int division(int num1,int num2){
     int div;
     div = num1/num2;
     return div;
 }
 
-int factorial(num){
+int factorial(int num){
     int contador,acumuladorUno=0;
     if (num<0){
         return -1;
@@ -46,8 +49,7 @@ int factorial(num){
            return 1;
            }
         else{
-            contador = num - 1;
-            for (contador;contador!=0;contador--){
+            for (contador=num-1;contador!=0;contador--){
                 acumuladorUno = num * contador + acumuladorUno;
             }
         }

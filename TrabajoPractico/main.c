@@ -41,13 +41,15 @@ int main()
             factorialUno = factorial(primerOperador);
             factorialDos = factorial(segundoOperador);
             if (factorialUno == -1 || factorialDos == -1) {
-                if (factorialUno == -1 && factorialDos != -1){
+                if (factorialUno == -1 && factorialDos == -1){
+                   printf("\n5- El primer operador es negativo al igual que el segundo, no possen factorial \n");
+                }
+                else if (factorialUno == -1 && factorialDos != -1){
                     printf("\n5- El primer operador es negativo, no posee factorial, el del segundo operador es: %d \n",factorialDos);
                     }
                 else{
                     printf("\n5- El factorial del primer operador es %d, el segundo opererador es negativo, no posee factorial \n",factorialUno);
                 }
-
             }
             else {
                 printf("\n5- El factorial del primer operador es: %d y del segundo es: %d \n",factorialUno,factorialDos);
@@ -72,16 +74,18 @@ int main()
             factorialUno = factorial(primerOperador);
             factorialDos = factorial(segundoOperador);
             if (factorialUno == -1 || factorialDos == -1) {
-                if (factorialUno == -1 && factorialDos != -1){
+                if (factorialUno == -1 && factorialDos == -1){
+                   printf("\n5- El primer operador es negativo al igual que el segundo, no possen factorial \n");
+                }
+                else if (factorialUno == -1 && factorialDos != -1){
                     printf("\n5- El primer operador es negativo, no posee factorial, el del segundo operador es: %d \n",factorialDos);
                     }
                 else{
-                    printf("\n5- El factorial del primer operador es %d, el segundo opererador es negativo, no posee factorial \n ",factorialUno);
+                    printf("\n5- El factorial del primer operador es %d, el segundo opererador es negativo, no posee factorial \n",factorialUno);
                 }
-
             }
             else {
-                printf("\n5- El factorial del primer operador es: %d y del segundo es: %d \n ",factorialUno,factorialDos);
+                printf("\n5- El factorial del primer operador es: %d y del segundo es: %d \n",factorialUno,factorialDos);
             }
         break;
         default:
