@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+* @brief Se imprime una lista de opciones, en la cual el usuario debe seleccionar una.
+* @return Devuelve un valor correspondido a la opcion seleccionada.
+*/
 int menu(){
     int opcion;
     printf("Menu de la calculadora\n");
@@ -15,30 +19,59 @@ int menu(){
     return opcion;
 }
 
+/**
+* @brief Suma dos valores enteros.
+* @param num1 El primer valor, para realizar la operacion.
+* @param num2 El segundo valor, para realizar la operacion.
+* @return Devuelve el resultado de la suma de los operadores ingresados.
+*/
 int suma(int num1, int num2){
     int suma;
     suma = (num1+num2);
     return suma;
 }
 
+/**
+* @brief Resta dos valores enteros.
+* @param num1 El primer valor, para realizar la operacion.
+* @param num2 El segundo valor, para realizar la operacion.
+* @return Devuelve el resultado de la resta de los operadores ingresados.
+*/
 int resta(int num1, int num2){
     int resta;
     resta = num1-num2;
     return resta;
 }
 
+/**
+* @brief Multiplica dos valores enteros.
+* @param num1 El primer valor, para realizar la operacion.
+* @param num2 El segundo valor, para realizar la operacion.
+* @return Devuelve el resultado de la multiplicacion de los operadores ingresados.
+*/
 int multiplicacion(int num1,int num2){
     int multi;
     multi = num1*num2;
     return multi;
 }
 
+/**
+* @brief Divide dos valores enteros y si no es posible da mensaje de error.
+* @param num1 El primer valor, para realizar la operacion.
+* @param num2 El segundo valor, para realizar la operacion el cual debe ser distinto de 0.
+* @return Devuelve el resultado de la division de los operadores ingresados.
+*/
 int division(int num1,int num2){
     int div;
     div = num1/num2;
     return div;
 }
 
+/**
+* @brief Realiza el factorial de un numero ingresado, en caso de que sea un numero negativo, da un mensaje de error.
+* @param num El numero al cual se desea realizar el factorial.
+* @return Devuelve el resultado del factorial del numero ingresado.
+*/
 int factorial(int num){
     int contador,acumuladorUno=0;
     if (num<0){
