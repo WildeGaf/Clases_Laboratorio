@@ -31,10 +31,6 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="Clientes.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Clientes.h" />
 		<Unit filename="Juegos.c">
 			<Option compilerVar="CC" />
 		</Unit>

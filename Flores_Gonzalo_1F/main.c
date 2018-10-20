@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "input.h"
-#include "Clientes.h"
 #include "Juegos.h"
 #define CANTJ 20
 #define CANTC 100
@@ -95,46 +94,15 @@ int main()
             }
         }
        if (respuesta == 3){
-            opcionElegida = menuInformes();
-            switch(opcionElegida){
-                case 1:
-                    printf("Ingrese el codigo del cliente");
-                    getInt(&auxCliente);
-                    r = findCliente(listaC,CANTC,auxCliente);
-                    if (r != -1 && listaC[r].isEmpty != 0){
-                    verificarAlquiler(r,listaJ,CANTJ,listaA,CANTA);
-                    }else{
-                        printf ("No se ha encontrado el cliente");
-                    }
-                    break;
-                case 2:
-                    system("cls");
-                    promedioJuegos(listaJ,listaA,CANTA);
-                    system("pause");
-                break;
-                case 3:
-                    system("cls")
-                    imprimirListaJuegosDos(listaJ,CANTJ);
-
-                /*case 4:
-                    printf("Ingrese el codigo del libro");
-                    getInt(&auxDescripcion);
-                    for (i=0;i<CANTA;i++){
-                        if (listaA.isEmpty == 1){
-                            if (listaA[i].codigoJuegos == auxCodigo){
-                               for (j=0;j<CANTA;j++){
-
-                               }
-
-                            }
-                        }
-                    }
-                break;*/
+            if (altaBanderaCliente==1 && altaBanderaJuego == 1){
+                addAlquiler(listaC,CANTC,listaJ,CANTJ,listaA,CANTA);
+            }else{
+            printf("Faltan datos de clientes o juegos");
             }
        }
         if (respuesta == 4){
             system("cls");
-            printf("Ha salido del programa");
+            opcionElegida = menuInformes();
         }
     }while(respuesta != 5);
 

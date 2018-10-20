@@ -5,7 +5,6 @@
 int menuInformes(){
     int opcion;
     printf ("*******Menu Informes******\n");
-    printf ("\n1- Ingrese uno para dar de alta un alquiler");
     printf ("\n2- Ingrese dos para imprimir el promedio y total de juegos alquilados");
     printf ("\n3- Ingrese tres para imprimir los juegos por importe");
     printf ("\n\nIngrese el numero: ");
@@ -13,14 +12,13 @@ int menuInformes(){
     return opcion;
 }
 
-
 int menuPrincipal(){
     int opcion;
     printf ("*******Menu Inicial******\n");
     printf ("\n1- Ingrese uno para acceder al menu de juegos");
     printf ("\n2- Ingrese dos para acceder al menu de clientes");
-    printf ("\n3- Ingrese tres para acceder al menu de alquileres");
-    printf ("\n4- Ingrese cuatro para salir");
+    printf ("\n3- Ingrese tres para dar de alta un alquiler");
+    printf ("\n4- Ingrese cinco para acceder al menu de informes");
     printf ("\n\nIngrese el numero: ");
     getInt(&opcion);
     return opcion;
@@ -28,22 +26,19 @@ int menuPrincipal(){
 
 /**************ENTRADA DE DATOS*****************/
 
-void getInt(int* puntero)
-{
+void getInt(int* puntero){
     int numero;
     scanf("%d",&numero);
     *puntero = numero;
 }
 
-void getFloat(float* puntero)
-{
+void getFloat(float* puntero){
     float numero;
     scanf ("%f",&numero);
     *puntero = numero;
 }
 
-void getChar(char* mensaje)
-{
+void getChar(char* mensaje){
     char letra;
     fflush(stdin);
     scanf("%c",&letra);
@@ -92,8 +87,7 @@ int esAlfaNumerico(char str[]){
     return 1;
 }
 
-int esTelefono(char str[])
-{
+int esTelefono(char str[]){
     int i = 0;
     int contadorGuiones = 0;
     while (str[i] != '\0'){

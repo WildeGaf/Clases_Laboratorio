@@ -2,45 +2,66 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="Juegos.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Juegos.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="8351" topLine="266" />
+			<Cursor1 position="5053" topLine="163" />
 		</Cursor>
 	</File>
-	<File name="Clientes.c" open="1" top="1" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="6559" topLine="123" />
-		</Cursor>
-		<Folding>
-			<Collapse line="6" />
-			<Collapse line="18" />
-			<Collapse line="25" />
-			<Collapse line="38" />
-		</Folding>
-	</File>
-	<File name="input.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="input.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="343" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="input.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="235" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="14" />
+			<Collapse line="28" />
+			<Collapse line="34" />
+			<Collapse line="40" />
+			<Collapse line="48" />
+			<Collapse line="55" />
+			<Collapse line="65" />
+			<Collapse line="77" />
+			<Collapse line="89" />
+			<Collapse line="107" />
+		</Folding>
+	</File>
+	<File name="Juegos.c" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="15567" topLine="98" />
+		</Cursor>
+		<Folding>
+			<Collapse line="7" />
+			<Collapse line="19" />
+			<Collapse line="26" />
+			<Collapse line="38" />
+			<Collapse line="50" />
+			<Collapse line="78" />
+			<Collapse line="115" />
+			<Collapse line="143" />
+			<Collapse line="157" />
+			<Collapse line="169" />
+			<Collapse line="190" />
+			<Collapse line="209" />
+			<Collapse line="225" />
+			<Collapse line="237" />
+			<Collapse line="244" />
+			<Collapse line="256" />
+			<Collapse line="294" />
+			<Collapse line="306" />
+			<Collapse line="358" />
+			<Collapse line="370" />
+			<Collapse line="423" />
+			<Collapse line="430" />
+			<Collapse line="441" />
+		</Folding>
+	</File>
 	<File name="main.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3864" topLine="107" />
-		</Cursor>
-	</File>
-	<File name="input.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="369" topLine="28" />
-		</Cursor>
-	</File>
-	<File name="Juegos.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2766" topLine="85" />
-		</Cursor>
-	</File>
-	<File name="Clientes.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="73" topLine="1" />
+			<Cursor1 position="332" topLine="84" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

@@ -131,3 +131,34 @@
 
 1539045403 c:\users\alumno\desktop\flores_gonzalo_1f\juegos.h
 
+1539046329 source:c:\users\gonza\desktop\flores_gonzalo_1f\clientes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Clientes.h"
+	"input.h"
+
+1539582733 c:\users\gonza\desktop\flores_gonzalo_1f\clientes.h
+
+1539046329 c:\users\gonza\desktop\flores_gonzalo_1f\input.h
+
+1539974817 source:c:\users\gonza\desktop\flores_gonzalo_1f\input.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1539970056 source:c:\users\gonza\desktop\flores_gonzalo_1f\juegos.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"input.h"
+	"Juegos.h"
+
+1539974846 c:\users\gonza\desktop\flores_gonzalo_1f\juegos.h
+
+1539970406 source:c:\users\gonza\desktop\flores_gonzalo_1f\main.c
+	<stdio.h>
+	<stdlib.h>
+	"input.h"
+	"Juegos.h"
+
