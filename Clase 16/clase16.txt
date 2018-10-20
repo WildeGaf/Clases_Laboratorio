@@ -1,0 +1,23 @@
+Punteros a cadenas
+
+void miFunc(char cadeba[]); Es lo mismo usar cualquiera de estas dos formas;
+void miFunc(char* cadeba);
+
+Punteros a cadenas de caracteres:
+char *letra;
+
+punteros a estructuras
+
+typedef struct{
+int edad;
+char nombre[31];
+}ePersona;
+
+main...
+ePersona per,pers[5],*p;
+p = &per; Primero se tiene q asignar la direccion de memoria de
+	  la estructura;
+
+
+(*p).edad  Dos formas de escribirlo, con el mismo funcionamiento
+p -> edad  Vamos a utilizar esta notacion.
