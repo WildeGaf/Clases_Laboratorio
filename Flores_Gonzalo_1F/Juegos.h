@@ -181,10 +181,13 @@ void ordenarClientes(eCliente* lista, int len);
 void addAlquiler(eCliente* listaC,int lenC,eJuegos* listaJ,int lenJ,eAlquiler* listaA,int lenA);
 int primerEspacioAlquiler(eAlquiler* lista,int len);
 void inicializarAlquiler(eAlquiler* lista,int len);
+
+//Informes
+
 void promedioJuegosAlquilados(eJuegos* listaJ,int lenJ,eAlquiler* listaA,int lenA);
 void alquilerJuegoDeterminado(eCliente listaC,int lenC,eAlquiler* listaA,int lenA,int codigoJ);
-
-void ordenarJuegosDos(eJuegos* lista, int len);
-void imprimirListaJuegosDos(eJuegos* lista,int len);
-
+void alquilerClienteDeterminado(eJuegos listaJ,int lenJ,eAlquiler* listaA,int lenA,int codigoC);
+void juegoMenosAlquilado(eJuegos listaJ,int lenJ,eAlquiler* listaA,int lenA);
+void clienteMasAlquileres(eCliente listaC,int lenC,eAlquiler* listaA,int lenA);
+void ordenarJuegosInforme(eJuegos* lista, int len);
 #endif//JUEGOS_H_INCLUDED

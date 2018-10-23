@@ -167,59 +167,6 @@ void imprimirListaJuegos(eJuegos* lista,int len){
     }
 }
 
-void promedioJuegos(eJuegos* listaJ,eAlquiler* listaA,int len){
-    int i,contador = 0;
-    int acumulador = 0;
-    int promedio,contadorProm=0;
-    for (i=0;i<len;i++){
-        if(listaA[i].isEmpty !=0){
-            contador = contador + 1;
-            acumulador = acumulador + listaJ[i].importe;
-        }
-    }
-    promedio = acumulador/contador;
-    printf("\nEl promedio es de: %d",promedio);
-    printf("\n\nEl total es de: %d",acumulador);
-    for (i=0;i<len;i++){
-        if(listaJ[i].isEmpty !=0 && listaJ[i].importe < promedio){
-            contadorProm = contadorProm + 1;
-        }
-    }
-    printf("\n\nLa cantidad de juegos que no superan el promedio es de: %d\n\n",contadorProm);
-}
-
-void ordenarJuegosDos(eJuegos* lista, int len){
- eJuegos AuxLista;
- int i,j;
-        for (i=0;i<len;i++){
-            if (lista[i].isEmpty == 1){
-                for(j=i+1;j<len;j++){
-                   if (lista[j].isEmpty == 1){
-                        if(lista[i].importe < lista[j].importe)
-                        {
-                            AuxLista = lista[i];
-                            lista[i] = lista[j];
-                            lista[j] = AuxLista;
-                        }
-                   }
-                }
-            }
-        }
-}
-
-void imprimirListaJuegosDos(eJuegos* lista,int len){
-    int i;
-    ordenarJuegosDos(lista,len);
-    for (i=0;i<len;i++){
-        if (lista[i].isEmpty == 1){
-            printf ("\n La descripcion es: %s",lista[i].descripcion);
-            printf ("\n El importe es: %d",lista[i].importe);
-            printf ("\n El codigo es: %d\n\n",lista[i].codigoJuego);
-        }
-    }
-}
-
-
 /***************************************************************************/
 
 
@@ -460,7 +407,7 @@ void addAlquiler(eCliente* listaC,int lenC,eJuegos* listaJ,int lenJ,eAlquiler* l
 
 /*********************************************************************************/
 
-
+//Punto A y B
 void promedioJuegosAlquilados(eJuegos* listaJ,int lenJ,eAlquiler* listaA,int lenA){
     int i,j,promedio,auxCodigo,contador=0,total=0;
     for (i=0;i<lenA;i++){
@@ -476,19 +423,100 @@ void promedioJuegosAlquilados(eJuegos* listaJ,int lenJ,eAlquiler* listaA,int len
     }
     promedio = total/contador;
     printf("\nEl promedio de los juegos alquilados es de :$ %d",promedio);
+    printf("\nEl total de los juegos alquilados es de :$ %d",total);
 }
 
+//punto C
 void alquilerJuegoDeterminado(eCliente listaC,int lenC,eAlquiler* listaA,int lenA,int codigoJ){
     int j,i;
     for (i=0;i<lenA;i++){
         if (listaA[i].isEmpty == 1 && listaA[i].codigoJuegos == codigoJ){
             for (j=0;j<lenC;j++){
-                if (listaC[j].isEmpty == 1 && listaC[j].codigoCliente == listaA[i].codigoCliente){
+                if ((listaC[j].isEmpty == 1) && (listaC[j].codigoCliente == listaA[i].codigoCliente)){
                     printf("\nApellido: %s",listaC[j].apellido);
                     printf("\nNombre: %s",listaC[j].nombre);
                     printf("\nCodigo: %d\n\n",listaC[j].codigoCliente);
                 }
             }
+        }
+    }
+}
+
+//Punto D
+void alquilerClienteDeterminado(eJuegos listaJ,int lenJ,eAlquiler* listaA,int lenA,int codigoC){
+int j,i;
+    for (i=0;i<lenA;i++){
+        if (listaA[i].isEmpty == 1 && listaA[i].codigoCliente == codigoC){
+            for (j=0;j<lenC;j++){
+                if (listaJ[j].isEmpty == 1 && listaJ[j].codigoJuego == listaA[i].codigoJuegos){
+                    printf("\nDescripcion: %s",listaJ[j].descripcion);
+                    printf("\nImporte: %d",listaJ[j].importe);
+                    printf("\nCodigo: %d\n\n",listaJ[j].codigoJuego);
+                }
+            }
+        }
+    }
+}
+
+//Punto E
+void juegoMenosAlquilado(eJuegos listaJ,int lenJ,eAlquiler* listaA,int lenA){
+int i,j,min=0;
+int contador,auxCodigo;
+    for (i=0;i<lenJ;i++){
+            contador = 0
+        for(j=0;j<lenA;j++){
+            if (listaJ[i].codigoJuego == listaA[j].codigoJuegos){
+                contador = contador + 1;
+                if (min==0 || contador < min){
+                    min = contador;
+                    auxCodigo = listaJ.codigoJuego;
+                }
+            }
+        }
+    }
+}
+
+//Punto F
+void clienteMasAlquileres(eCliente listaC,int lenC,eAlquiler* listaA,int lenA){
+int i,j,max=0;
+int contador,auxCliente;
+    for (i=0;i<lenC;i++){
+            contador = 0;
+        for(j=0;j<lenA;j++){
+            if (listaC[i].codigoCliente == listaA[j].codigoCliente){
+                contador++;
+                if (max==0 || contador > max){
+                    max = contador;
+                    auxCliente = listaC.codigoCliente;
+                }
+            }
+        }
+    }
+}
+
+//Punto I
+void ordenarJuegosInforme(eJuegos* lista, int len){
+ eJuegos AuxLista;
+ int i,j;
+        for (i=0;i<len;i++){
+            if (lista[i].isEmpty == 1){
+                for(j=i+1;j<len;j++){
+                   if (lista[j].isEmpty == 1){
+                        if(lista[i].importe > lista[j].importe)
+                        {
+                            AuxLista = lista[i];
+                            lista[i] = lista[j];
+                            lista[j] = AuxLista;
+                        }
+                   }
+                }
+            }
+        }
+        for (i=0;i<len;i++){
+        if (lista[i].isEmpty == 1){
+            printf ("\n La descripcion es: %s",lista[i].descripcion);
+            printf ("\n El importe es: %d",lista[i].importe);
+            printf ("\n El codigo es: %d\n\n",lista[i].codigoJuego);
         }
     }
 }
