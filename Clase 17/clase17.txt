@@ -1,0 +1,33 @@
+Clase 17
+
+stdlib.h es la libreria que se utiliza para usar punteros con memoria dinamica.
+estamos utilizando punteros para pedirle al sistema operativo memoria de forma dinamica.
+
+Funcion malloc: se pusa para pedir memoria;
+
+malloc int*;
+
+void * malloc(sizeof(int));  al ser void* devuelve un puntero;
+
+p = (int*) malloc (sizeif(int)*2);
+			  int- puede ser reemplazado por otros tipo de datos o estructuras;
+
+En caso de que la funcion malloc no encuentre memoria disponible va a retornar NULL, sino devuelve
+la primera ubicacion de memoria disponible. 
+
+
+Funcion realloc
+
+pAux = realloc(p,sizeof(int)*2);
+if(pAux!=NULL){
+	p = pAux;
+}
+
+se usa un auxiliar para no pisar los datos de P. Los espacios de memoria deben ser consecutivos.
+si p = 0x100 y pAux = 0x116 ya que no encuentra espacio liberado consecutivo, p se reemplazaria a
+ser 0x116.
+
+free(p) = Se usa para liberar la memoria que no es utilizada.
+Si p llega a ser igual a NULL el programa no puede liberar memoria no utilizada por lo cual daria un error.
+Otro error es liberar una variable dos veces. ya que la direccion se pierde y queda inaccesible.
+
